@@ -97,7 +97,7 @@ app.get('/', (req, res) => {
 app.get('/:id', ((req, res) => {
     var record = findById(staff, req.params.id)
     if(!record){
-        res.status = 404;
+        res.status(404);
         res.json({
             error: {
                 message: 'No record found!'
